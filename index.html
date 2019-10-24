@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>light,layer</title>
+<link href="https://fonts.googleapis.com/css?family=codystar|Josefin+Sans:300,400|Noto+Sans+KR&display=swap" rel="stylesheet">
+          <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                   
+                var xOffset = 10;
+                var yOffset = 30;
+ 
+                $(document).on("mouseover",".j2",function(e){ //마우스 오버시
+                     
+                    $("body").append("<p id='preview'><img src='"+ $(this).attr("src") +"' width='400px' /></p>"); //보여줄 이미지를 선언                       
+                    $("#preview")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left",(e.pageX + yOffset) + "px")
+                        .fadeIn("fast"); //미리보기 화면 설정 셋팅
+                });
+                 
+                $(document).on("mousemove",".j2",function(e){ //마우스 이동시
+                    $("#preview")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left",(e.pageX + yOffset) + "px");
+                });
+                 
+                $(document).on("mouseout",".j2",function(){ //마우스 아웃시
+                    $("#preview").remove();
+                });         
+            });
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $('html').css({'cursor':'url(cursor1.cur), auto'});
+</script>
+ </head>
+
+    <style>
+    hr { position: absolute; bottom: 808px; z-index: 9999; width: 2000px;}
+
+    .home{width:60px; height: 19px; background-color:white;position: absolute; bottom:780px; left: 410px; z-index: 6;   font-family: 'Josefin Sans', sans-serif; font-weight: thin; }
+    .laszlo{width:70px; height: 54px; background-color:white;position: absolute; bottom:710px; left: 440px; z-index: 7; text-align: left;padding: 2px;  font-family: 'Josefin Sans', sans-serif;}
+    .light{width:94px; height: 18px; background-color:white;position: absolute; bottom:659px; left: 344px; z-index: 7; text-align: left; padding: 2px;   font-family: 'Josefin Sans', sans-serif;font-weight: normal}
+     .a{width: 80px; height:20px; background-color: blue;position: absolute; bottom:570px; left:130px; }
+    .b{width: 80px; height:20px; background-color: blue;position: absolute; bottom:560px; left:180px; }
+    .c{width: 80px; height:40px; background-color: blue;position: absolute; bottom:600px; left:210px; }
+    .d{width: 10px; height:70px; background-color: blue;position: absolute; bottom:700px; left:370px; }
+    .e{width: 20px; height:20px; background-color: blue;position: absolute; bottom:680px; left:380px; }
+    .f{width: 60px; height:20px; background-color: blue;position: absolute; bottom:640px; left:320px; }
+     .g{width: 40px; height:40px; background-color: blue;position: absolute; bottom:740px; left:410px; }
+       .h{width: 40px; height:40px; background-color: blue;position: absolute; bottom:720px; left:430px; }
+         .i{width: 40px; height:40px; background-color: blue;position: absolute; bottom:700px; left:450px; }
+          .j{width: 1px; height:1px; background-color: blue;position: absolute; bottom:500px; left:450px; }
+     .a1{width: 60px; height:10px; background-color: blue;position: absolute; bottom:570px; left:470px; }
+    .b1{width: 60px; height:10px; background-color: blue;position: absolute; bottom:560px; left:480px; }
+    .c1{width: 60px; height:20px; background-color: blue;position: absolute; bottom:600px; left:510px; }
+    .d1{width: 3px; height:30px; background-color: blue;position: absolute; bottom:700px; left:600px; }
+    .e1{width: 10px; height:10px; background-color: blue;position: absolute; bottom:680px; left:780px; }
+    .f1{width: 20px; height:10px; background-color: blue;position: absolute; bottom:640px; left:720px; }
+     .g1{width: 20px; height:20px; background-color: blue;position: absolute; bottom:740px; left:810px; }
+       .h1{width: 20px; height:20px; background-color: blue;position: absolute; bottom:720px; left:830px; }
+         .i1{width: 20px; height:20px; background-color: blue;position: absolute; bottom:700px; left:850px; }
+          .j1{width: 1px; height:1px; background-color: blue;position: absolute; bottom:560px; left:870px; }
+            .a2{width: 80px; height:20px; background-color: blue;position: absolute; bottom:570px; left:900px; }
+    .b2{width: 80px; height:20px; background-color: blue;position: absolute; bottom:560px; left:910px; }
+    .c2{width: 80px; height:40px; background-color: blue;position: absolute; bottom:600px; left:930px; }
+    .d2{width: 10px; height:70px; background-color: blue;position: absolute; bottom:700px; left:960px; }
+    .e2{width: 20px; height:20px; background-color: blue;position: absolute; bottom:680px; left:990px; }
+    .f2{width: 60px; height:20px; background-color: blue;position: absolute; bottom:640px; left:1000px; }
+     .g2{width: 40px; height:40px; background-color: blue;position: absolute; bottom:740px; left:1010px; }
+       .h2{width: 40px; height:40px; background-color: blue;position: absolute; bottom:720px; left:1200px; }
+         .i2{width: 40px; height:40px; background-color: blue;position: absolute; bottom:700px; left:1260px; }
+          .j2{width: 10px; height:10px; background-color: blue;position: absolute; bottom:720px; left:520px; }
+              .e3{width: 20px; height:20px; background-color: blue;position: absolute; bottom:680px; left:990px; }
+    .f3{width: 60px; height:20px; background-color: blue;position: absolute; bottom:640px; left:-10px; }
+     .g3{width: 40px; height:40px; background-color: blue;position: absolute; bottom:500px; left:10px; }
+       .h3{width: 20px; height:10px; background-color: blue;position: absolute; bottom:480px; left:50px; }
+         .i3{width: 10px; height:10px; background-color: blue;position: absolute; bottom:500px; left:20px; }
+          .j3{width: 10px; height:10px; background-color: blue;position: absolute; bottom:500px; left:31px; }
+               .j3text{width: 20px; position: absolute; bottom: 752px;left:8px; font-size: 18px; z-index: 1;   font-family: 'Josefin Sans', sans-serif;}
+              .j4text{width: 20px; position: absolute; bottom: 740px; font-size: 18px; left:80px;z-index: 2;  font-family: 'Josefin Sans', sans-serif;}
+              .j5text{width: 20px; position: absolute; bottom: 720px; font-size: 18px;  left:10px;z-index: 1;  font-family: 'Josefin Sans', sans-serif;}
+                .j6text{position: absolute; bottom: 740px; font-size: 18px; left:12px; z-index: 2; width: 20px; height: 2px;z-index: 4;  font-family: 'Josefin Sans', sans-serif;}
+                .j7text{position: absolute; bottom: 780px; font-size: 18px; left:1320px; z-index: 2; width: 20px; height: 2px;z-index: 4;  font-family: 'Josefin Sans', sans-serif;}
+    body{ margin:0; }
+      div {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 20px;
+        padding: 10px 30px;
+        background-color: white;
+      }
+
+      .menulist li{ width:100px; float:left; list-style-type:none; margin-right: 20px;}
+      .menulist li a img{ width:100px;}
+      .webmenu{float:left; list-style-type: disc;}
+      .webtitle{ font-size: 1em; position: absolute; left:10px; bottom:760px;color: black; background-color: blue;}
+      #container{ width:2000px; height: 100vh; overflow:hidden; background: yellow; padding:0;}
+      .a{width: 100px; height: 100px; background-color: blue;}
+
+    .j2 img:last-child{display:none} .j2:hover img:first-child{display:none} .j2:hover img:last-child{display:inline-block}
+
+
+
+    </style>
+
+                        <link rel="stylesheet" type="text/css" href="style.css">
+}
+
+
+<style type"text/css">
+A:link {text-decoration: none; color:black;}
+A:visited {text-decoration: none; color:black}
+A:active {text-decoration: none; color:black;}
+A:hover{text-decoration: none; color:black;}
+</style>
+
+  <body>
+
+<div id="container"></div>
+    <div class="webmenu"></div>
+<p class="laszlo">
+<a href="file:///Users/jaewon/Desktop/%EB%AC%B4%EC%A0%9C%20%ED%8F%B4%EB%8D%94%202/dphtml/page.html"/ data-type="page" data-id="7" data-title="László Moholy-Nagy">2. László Moholy-Nagy</a></div>
+<p class="home">
+  <a href="file:///Users/jaewon/Desktop/%EB%AC%B4%EC%A0%9C%20%ED%8F%B4%EB%8D%94%202/dphtml/dphome2.html"/ data-type="page" data-id="7" data-title="Home">1. Home</a></p>
+  <p class="light">
+<a href="file:///Users/jaewon/Desktop/%EB%AC%B4%EC%A0%9C%20%ED%8F%B4%EB%8D%94%202/dphtml/light.html"/ data-type="page" data-id="7" data-title="light">3. Light,layer</a></div>
+
+
+
+  <div class="a"></div>
+  <div class="b"></div>
+  <div class="c"></div>
+  <div class="d"></div>
+  <div class="e"></div>
+   <div class="f"></div>
+   <div class="g"></div>
+   <div class="h"></div>
+    <div class="i"></div>
+    <div class="j"></div>
+    <div class="a1"></div>
+  <div class="b1"></div>
+  <div class="c1"></div>
+  <div class="d1"></div>
+  <div class="e1"></div>
+   <div class="f1"></div>
+   <div class="g1"></div>
+   <div class="h1"></div>
+    <div class="i1"></div>
+    <div class="j1"></div>
+     <div class="a2"></div>
+  <div class="b2"></div>
+  <div class="c2"></div>
+  <div class="d2"></div>
+  <div class="e2"></div>
+   <div class="f2"></div>
+   <div class="g2"></div>
+   <div class="h2"></div>
+    <div class="i2"></div>
+    <div class="j2"></div>
+      <div class="e3"></div>
+   <div class="f3"></div>
+   <div class="g3"></div>
+   <div class="h3"></div>
+    <div class="i3"></div>
+    <div class="j3"></div>
+
+<div class="j2" > <img src="dpi1.png" width="50px" height="50" /> <img src="img1.jpeg" width="300px" height="400px"/> </div>
+<hr style="border: dotted 5px blue">
+<div class="j3text">Light,layer</div>
+<div class="j4text">Light,layer</div>
+<div class="j5text">Light,layer</div>
+<div class="j6text">Layer,light</div>
+<div class="j7text">Light</div>
+
+  <script>//배경이다 지우지마/
+  for(var j=0; j<100; j++){
+      for(var i=0; i<5; i++){
+      var a = document.createElement("div");
+      a.className = "basic sha" + i;
+      container.appendChild(a);
+    }  
+  }
+  </script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+
+.sha6{  box-shadow: 5px gray; }
+.sha5{  box-shadow: 5px 5px 5px 5px gray inset; }
+.sha4{  box-shadow: 5px 5px 5px 5px; }
+.sha3{  box-shadow: 5px 5px 5px 5px gray; }
+.sha2{  box-shadow: 5px 5px 5px 5px gray inset; }
+.sha1{  box-shadow: 5px 5px 5px grey; }
+.basic{ float: left; margin-bottom: 20px; }
+
+
